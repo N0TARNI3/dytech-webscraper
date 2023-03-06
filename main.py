@@ -9,19 +9,12 @@ import logging
 # Logging configurations
 logs = logging.getLogger(__name__)
 logs.setLevel(logging.DEBUG)
-
-file = logging.FileHandler("scraper.log")
-file.setLevel(logging.DEBUG)
-file_format = logging.Formatter('%(asctime)s - %(message)s', datefmt='%d-%b-%Y %H:%M:%S')
-file.setFormatter(file_format)
-
 stream = logging.StreamHandler()
 stream.setLevel(logging.INFO)
-stream_format = logging.Formatter('%(asctime)s - %(message)s', datefmt='%H:%M:%S')
+stream_format = logging.Formatter('%(asctime)s | %(levelname)8s | %(message)s', datefmt='%H:%M:%S')
 stream.setFormatter(stream_format)
-
-logs.addHandler(file)
 logs.addHandler(stream)
+logging.basicConfig(filename="scraper.log", level=logging.DEBUG, format='%(asctime)s | %(levelname)8s | %(message)s', datefmt='%d-%b-%Y %H:%M:%S')
 
 # Main download link of the required files
 DOMAIN = 'https://links.sgx.com/1.0.0/derivatives-historical/'
@@ -39,21 +32,40 @@ def GET_FILES(id,date):
 
     # Create new directory where files will be saved
     dir_path = os.path.dirname(os.path.realpath(__file__))
-    folder = os.path.join(f"{dir_path}/FILES", str(date))
+    folder = os.path.join(f"{dir_path}\FILES", str(date))
     if os.path.exists(folder):
         shutil.rmtree(folder)
     os.mkdir(folder)
-    logs.info(f"{folder} created!")
 
     # Download needed files thru requests
     for file in FILES:
-        response = requests.get(f"{DOMAIN}53{id}\{file}")
-        d = response.headers.get('content-disposition')
-        filename = re.findall('filename=(.+)', d)[0]
-        file = os.path.join(folder, filename)
-        with open(file, 'wb') as f:
-            f.write(response.content)            
-            logs.info(f"{filename} successfully downloaded!")    
+        run = 1
+        while(run == 1): # Loop for retry prompts
+            logs.info(f"Fetching: {file}")
+            try:
+                response = requests.get(f"{DOMAIN}53{id}1/{file}")
+
+                # Error handling
+                if "/CustomErrorPage.aspx" in response.url:
+                    raise Exception(f"File {file} from {date} was not found...")
+                if response.status_code != 200:
+                    raise Exception(f"{response.status_code}:{response.reason}")
+
+                d = response.headers.get('content-disposition')
+                filename = re.findall('filename=(.+)', d)[0]
+                file = os.path.join(folder, filename)
+
+                try:
+                    with open(file, 'wb') as f:
+                        f.write(response.content)            
+                        logs.info(f"{filename} successfully downloaded!")
+                except Exception as e:
+                    logs.error(e)
+                    
+            except Exception as e:
+                logs.error(e)
+                print("\nCheck if your system has the correct date, or you have stable internet connection.\nDo you want to retry, or proceed to the next file?")
+                run = int(input("0 - Proceed | 1 - Retry \n>> "))
 
 def main():
     # Compute for the unique ID and the most recent SGX market day
