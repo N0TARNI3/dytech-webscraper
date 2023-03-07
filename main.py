@@ -43,7 +43,7 @@ def GET_FILES(id,date):
         while(run == 1): # Loop for retry prompts
             logs.info(f"Fetching: {file}")
             try:
-                response = requests.get(f"{DOMAIN}53{id}1/{file}")
+                response = requests.get(f"{DOMAIN}53{id}/{file}")
 
                 # Error handling
                 if "/CustomErrorPage.aspx" in response.url:
@@ -53,14 +53,17 @@ def GET_FILES(id,date):
 
                 d = response.headers.get('content-disposition')
                 filename = re.findall('filename=(.+)', d)[0]
-                file = os.path.join(folder, filename)
-
+                file_dir = os.path.join(folder, filename)
+                
                 try:
-                    with open(file, 'wb') as f:
+                    with open(file_dir, 'wb') as f:
                         f.write(response.content)            
                         logs.info(f"{filename} successfully downloaded!")
+                        run = 0
                 except Exception as e:
                     logs.error(e)
+                    print("\nDo you want to retry, or proceed to the next file?")
+                    run = int(input("0 - Proceed | 1 - Retry \n>> "))
                     
             except Exception as e:
                 logs.error(e)

@@ -1,0 +1,68 @@
+07-Mar-2023 16:35:54 |     INFO | Getting files from 03-06-2023
+07-Mar-2023 16:35:54 |     INFO | Fetching: WEBPXTICK_DT.zip
+07-Mar-2023 16:35:54 |    DEBUG | Starting new HTTPS connection (1): links.sgx.com:443
+07-Mar-2023 16:35:55 |    DEBUG | https://links.sgx.com:443 "GET /1.0.0/derivatives-historical/5369/WEBPXTICK_DT.zip HTTP/1.1" 200 16071634
+07-Mar-2023 16:35:56 |     INFO | WEBPXTICK_DT-20230306.zip successfully downloaded!
+07-Mar-2023 16:35:56 |     INFO | Fetching: TickData_structure.dat
+07-Mar-2023 16:35:56 |    DEBUG | Starting new HTTPS connection (1): links.sgx.com:443
+07-Mar-2023 16:35:56 |    DEBUG | https://links.sgx.com:443 "GET /1.0.0/derivatives-historical/5369/TickData_structure.dat HTTP/1.1" 200 706
+07-Mar-2023 16:35:56 |     INFO | TickData_structure.dat successfully downloaded!
+07-Mar-2023 16:35:56 |     INFO | Fetching: TC.txt
+07-Mar-2023 16:35:56 |    DEBUG | Starting new HTTPS connection (1): links.sgx.com:443
+07-Mar-2023 16:35:56 |    DEBUG | https://links.sgx.com:443 "GET /1.0.0/derivatives-historical/5369/TC.txt HTTP/1.1" 200 256
+07-Mar-2023 16:35:56 |     INFO | TC_20230306.txt successfully downloaded!
+07-Mar-2023 16:35:56 |     INFO | Fetching: TC_structure.dat
+07-Mar-2023 16:35:56 |    DEBUG | Starting new HTTPS connection (1): links.sgx.com:443
+07-Mar-2023 16:35:56 |    DEBUG | https://links.sgx.com:443 "GET /1.0.0/derivatives-historical/5369/TC_structure.dat HTTP/1.1" 200 628
+07-Mar-2023 16:35:56 |     INFO | TC_structure.dat successfully downloaded!
+07-Mar-2023 16:35:56 |     INFO | Getting files from 03-03-2023
+07-Mar-2023 16:35:56 |     INFO | Fetching: WEBPXTICK_DT.zip
+07-Mar-2023 16:35:56 |    DEBUG | Starting new HTTPS connection (1): links.sgx.com:443
+07-Mar-2023 16:35:56 |    DEBUG | https://links.sgx.com:443 "GET /1.0.0/derivatives-historical/5368/WEBPXTICK_DT.zip HTTP/1.1" 200 15487300
+07-Mar-2023 16:35:57 |     INFO | WEBPXTICK_DT-20230303.zip successfully downloaded!
+07-Mar-2023 16:35:57 |     INFO | Fetching: TickData_structure.dat
+07-Mar-2023 16:35:57 |    DEBUG | Starting new HTTPS connection (1): links.sgx.com:443
+07-Mar-2023 16:35:57 |    DEBUG | https://links.sgx.com:443 "GET /1.0.0/derivatives-historical/5368/TickData_structure.dat HTTP/1.1" 200 706
+07-Mar-2023 16:35:57 |     INFO | TickData_structure.dat successfully downloaded!
+07-Mar-2023 16:35:57 |     INFO | Fetching: TC.txt
+07-Mar-2023 16:35:57 |    DEBUG | Starting new HTTPS connection (1): links.sgx.com:443
+07-Mar-2023 16:35:57 |    DEBUG | https://links.sgx.com:443 "GET /1.0.0/derivatives-historical/5368/TC.txt HTTP/1.1" 200 234
+07-Mar-2023 16:35:57 |     INFO | TC_20230303.txt successfully downloaded!
+07-Mar-2023 16:35:57 |     INFO | Fetching: TC_structure.dat
+07-Mar-2023 16:35:57 |    DEBUG | Starting new HTTPS connection (1): links.sgx.com:443
+07-Mar-2023 16:35:57 |    DEBUG | https://links.sgx.com:443 "GET /1.0.0/derivatives-historical/5368/TC_structure.dat HTTP/1.1" 200 628
+07-Mar-2023 16:35:57 |     INFO | TC_structure.dat successfully downloaded!
+07-Mar-2023 16:35:57 |     INFO | Getting files from 03-02-2023
+07-Mar-2023 16:35:57 |     INFO | Fetching: WEBPXTICK_DT.zip
+07-Mar-2023 16:35:57 |    DEBUG | Starting new HTTPS connection (1): links.sgx.com:443
+07-Mar-2023 16:35:58 |    DEBUG | https://links.sgx.com:443 "GET /1.0.0/derivatives-historical/5367/WEBPXTICK_DT.zip HTTP/1.1" 200 16112482
+07-Mar-2023 16:35:59 |     INFO | WEBPXTICK_DT-20230302.zip successfully downloaded!
+07-Mar-2023 16:35:59 |     INFO | Fetching: TickData_structure.dat
+07-Mar-2023 16:35:59 |    DEBUG | Starting new HTTPS connection (1): links.sgx.com:443
+07-Mar-2023 16:35:59 |    DEBUG | https://links.sgx.com:443 "GET /1.0.0/derivatives-historical/5367/TickData_structure.dat HTTP/1.1" 200 706
+07-Mar-2023 16:35:59 |     INFO | TickData_structure.dat successfully downloaded!
+07-Mar-2023 16:35:59 |     INFO | Fetching: TC.txt
+07-Mar-2023 16:35:59 |    DEBUG | Starting new HTTPS connection (1): links.sgx.com:443
+07-Mar-2023 16:35:59 |    DEBUG | https://links.sgx.com:443 "GET /1.0.0/derivatives-historical/5367/TC.txt HTTP/1.1" 200 199
+07-Mar-2023 16:35:59 |     INFO | TC_20230302.txt successfully downloaded!
+07-Mar-2023 16:35:59 |     INFO | Fetching: TC_structure.dat
+07-Mar-2023 16:35:59 |    DEBUG | Starting new HTTPS connection (1): links.sgx.com:443
+07-Mar-2023 16:35:59 |    DEBUG | https://links.sgx.com:443 "GET /1.0.0/derivatives-historical/5367/TC_structure.dat HTTP/1.1" 200 628
+07-Mar-2023 16:35:59 |     INFO | TC_structure.dat successfully downloaded!
+07-Mar-2023 16:35:59 |     INFO | Getting files from 03-01-2023
+07-Mar-2023 16:35:59 |     INFO | Fetching: WEBPXTICK_DT.zip
+07-Mar-2023 16:35:59 |    DEBUG | Starting new HTTPS connection (1): links.sgx.com:443
+07-Mar-2023 16:36:00 |    DEBUG | https://links.sgx.com:443 "GET /1.0.0/derivatives-historical/5366/WEBPXTICK_DT.zip HTTP/1.1" 200 17933839
+07-Mar-2023 16:36:00 |     INFO | WEBPXTICK_DT-20230301.zip successfully downloaded!
+07-Mar-2023 16:36:00 |     INFO | Fetching: TickData_structure.dat
+07-Mar-2023 16:36:00 |    DEBUG | Starting new HTTPS connection (1): links.sgx.com:443
+07-Mar-2023 16:36:00 |    DEBUG | https://links.sgx.com:443 "GET /1.0.0/derivatives-historical/5366/TickData_structure.dat HTTP/1.1" 200 706
+07-Mar-2023 16:36:00 |     INFO | TickData_structure.dat successfully downloaded!
+07-Mar-2023 16:36:00 |     INFO | Fetching: TC.txt
+07-Mar-2023 16:36:00 |    DEBUG | Starting new HTTPS connection (1): links.sgx.com:443
+07-Mar-2023 16:36:01 |    DEBUG | https://links.sgx.com:443 "GET /1.0.0/derivatives-historical/5366/TC.txt HTTP/1.1" 200 267
+07-Mar-2023 16:36:01 |     INFO | TC_20230301.txt successfully downloaded!
+07-Mar-2023 16:36:01 |     INFO | Fetching: TC_structure.dat
+07-Mar-2023 16:36:01 |    DEBUG | Starting new HTTPS connection (1): links.sgx.com:443
+07-Mar-2023 16:36:01 |    DEBUG | https://links.sgx.com:443 "GET /1.0.0/derivatives-historical/5366/TC_structure.dat HTTP/1.1" 200 628
+07-Mar-2023 16:36:01 |     INFO | TC_structure.dat successfully downloaded!
